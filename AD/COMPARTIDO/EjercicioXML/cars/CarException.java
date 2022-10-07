@@ -5,51 +5,33 @@
 package cars;
 
 /**
- *
+ * Wrapper para excepciones. Añade contexto (parent = getClass().getSimpleName()).
  * @author AaronFM
  */
 public class CarException extends Exception{
     private String parent;
-
-    /**
-     *
-     * @return
-     */
+    
     public String getParent() {
         return parent;
     }
 
-    /**
-     *
-     * @param parent
-     */
     public void setParent(String parent) {
         this.parent = parent;
     }
     
-    /**
-     *
-     * @param message
-     */
     public CarException(String message) {
         super(message);
     }
 
     /**
      *
-     * @param parent
+     * @param parent Normalmente lo uso para reconocer el tipo de excepción en el mensaje que lance.
      * @param message
      */
     public CarException(String parent, String message) {
         super(message);
         this.parent = parent;
     }
-
-    /**
-     *
-     * @param message
-     * @param cause
-     */
     public CarException(String message, Throwable cause) {
         super(message, cause);
     }
