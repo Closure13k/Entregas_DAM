@@ -5,11 +5,8 @@
 package ad.aaronfm.xml.ejerciciosxml.Person.PersonFileControllers;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -25,8 +22,8 @@ public class HTMLConverter {
 
     /**
      * Converts XML file into HTML, style-supported by its XSL file.Se puede
-     * dividir todo en variables por visibilidad, pero si tienes claro qué usa
-     * cada cosa se puede hacer en incluso 1 línea.
+     * dividir todo en variables por visibilidad, pero si tienes claro quï¿½ usa
+     * cada cosa se puede hacer en incluso 1 lï¿½nea.
      *
      * @param xmlFile
      * @param xslFile
