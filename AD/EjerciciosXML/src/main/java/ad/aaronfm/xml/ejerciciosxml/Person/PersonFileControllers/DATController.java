@@ -30,7 +30,7 @@ public class DATController {
      */
     public static void loadPeopleInDATFile(File datFile) throws IOException {
         People people = new People(List.of(new Person("Manolo", 32), new Person("Lupe", 23), new Person("Lola", 12), new Person("Alex", 77), new Person("Diego", 44)));
-        try (final ObjectOutputStream objOut = new ObjectOutputStream(new FileOutputStream(datFile))) {
+        try (ObjectOutputStream objOut = new ObjectOutputStream(new FileOutputStream(datFile))) {
             for (Person person : people.getPersonList()) {
                 objOut.writeObject(person);
             }
@@ -50,7 +50,7 @@ public class DATController {
      */
     public static People readPeopleFromDATFile(File datFile) throws IOException, ClassNotFoundException {
         People people = new People();
-        try (final ObjectInputStream objIn = new ObjectInputStream(new FileInputStream(datFile))) {
+        try (ObjectInputStream objIn = new ObjectInputStream(new FileInputStream(datFile))) {
             Object objToRead;
             for (;;) {
                 try {
